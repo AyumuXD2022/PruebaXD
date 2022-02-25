@@ -16,7 +16,7 @@ class RepresentativesController extends Controller
     }
     public function create(){
         $countries = Countries::all();
-        return view('su.countries',compact('countries'));
+        return view('su.representatives',compact('countries'));
     }
     public function store(RepresentativesRequest $request, Representatives $persons){
         $request = Representatives::create($request->validated());
