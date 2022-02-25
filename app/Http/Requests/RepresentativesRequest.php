@@ -24,12 +24,12 @@ class RepresentativesRequest extends FormRequest
     public function rules()
     {
         return [
-            'city'=>['required'],
-            'name'=>['required'],
-            'surname'=>['required'],
-            'phone'=>['required'],
-            'email'=>['required'],
-            'id_country'=>['required'],
+            'city'=>'required',
+            'name'=>'required',
+            'surname'=>'required',
+            'phone'=>'required',
+            'email'=>'required',
+            'id_country'=>'required',
         ];
     }
 }

@@ -3,7 +3,8 @@
 @section('content')
     <h1 class="mt-3">Registro</h1>
     <main>
-        <form action="" method="">
+        <form action="{{route('persons.store')}}" method="POST">
+            @csrf
             <div class="mb-3">
                 <label for="city" class="form-label">Ciudad</label>
                 <input type="text" class="form-control"  name="city" id="city" placeholder="La ciudad">
