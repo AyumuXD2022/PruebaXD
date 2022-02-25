@@ -3,6 +3,7 @@
 @section('content')
     <h1 class="mt-3">Registro</h1>
     <main>
+        <a class="btn btn-success" href="{{route('country.create')}}">Registrar Pais</a>
         <form action="{{route('persons.store')}}" method="POST">
             @csrf
             <div class="mb-3">
