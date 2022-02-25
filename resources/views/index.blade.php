@@ -2,6 +2,7 @@
 @section('title', 'Representante')
 @section('content')
     <h1>Representante</h1>
+    <a class="btn btn-success" href="{{route('persons.create')}}">Registrar</a>
     <table class="table">
         <thead>
             <tr>
@@ -15,15 +16,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
+            @foreach ($persons as $person)
+                <tr>
+                    <td>{{$person->id}}</td>
+                    <th>{{$person->city}}</th>
+                    <td>{{$person->name}}</td>
+                    <td>{{$person->surname}}</td>
+                    <td>{{$person->phone}}</td>
+                    <td>{{$person->email}}</td>
+                    <td>{{$person->id_country}}</td>
+                </tr>
+            @endforeach
+            
         </tbody>
     </table>
 @endsection
