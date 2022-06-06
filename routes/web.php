@@ -1,14 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RepresentativesController;
-use App\Http\Controllers\CountriesController;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-
-
-Route::get('/', [RepresentativesController::class, 'index'])->name('persons.index');
-Route::get('persons/create', [RepresentativesController::class, 'create'])->name('persons.create');
-Route::post('persons/create', [RepresentativesController::class, 'store'])->name('persons.store');
-
-Route::get('country/create', [CountriesController::class, 'create'])->name('country.create');
+Route::get('/', function () {
+    return view('welcome');
+});
